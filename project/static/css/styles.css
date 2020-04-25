@@ -53,7 +53,7 @@ a {
     color: #DD828B;
 }
 
-.header .menu, .header .register {
+.header .menu, .header .auth {
     display: flex;
     align-items: center;
 }
@@ -65,10 +65,9 @@ a {
     margin-right: 50px;
     color: #DD828B;
 }
-.header .register a {
+.header .auth a {
     font-weight: 500;
     margin-right: 20px;
-    color: #DD828B;
 }
 
 .landing .content {
@@ -96,14 +95,14 @@ a {
 }
 
 
-button {
+button, .button {
     display: inline-block;
     border: none;
     padding: 10px 30px;
     outline: none;
     letter-spacing: 0.5px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 500;
     color: #FFF;
     background-color: #DD828B;
     border-radius: 0.5em;
@@ -111,6 +110,6 @@ button {
     transition: all 0.3s ease;
     cursor: pointer;
 }
-button:hover {
+button:hover, .button:hover {
     box-shadow: 8px 10px 20px 0 rgba(46, 61, 73, 0.15);
 }
