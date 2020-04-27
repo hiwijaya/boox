@@ -154,9 +154,11 @@ a {
 
 form .field {
     margin-bottom: 10px;
+    white-space: nowrap;
 }
 
-form .field h6 {
+form .field label {
+    display: block;
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -171,12 +173,20 @@ form .field input {
     border: none;
     box-sizing: border-box;
     outline: none;
+    transition: all 0.3s ease;
 }
 form .field input:hover {
     outline: none;
     background: transparent;
     border: 0.5px solid #F3F3F4;
     box-shadow: 0 0 7px #DD828B;
+}
+form .agree {
+    margin: 20px 0;
+    font-size: 0.9em;
+}
+form .chorizontal a {
+    margin-left: 20px;
 }
 
 
