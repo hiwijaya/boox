@@ -26,39 +26,64 @@
     <div class="page">
         <div class="side">
             <p>Delivering your <br/> bookmarks.</p>
-            <img src="{% static 'img/bike.png' %}" alt="Boke"/>
+            <img src="{% static 'img/bike.png' %}" alt="Bike"/>
         </div>
         <div class="auth">
-            <div class="title chorizontal">
-                <img src="{% static 'img/boox.png' %}" alt="Logo"/>
-                <span>Sign Up to Boox</span>
-            </div>
-            <form>
-                <div class="field">
-                    <label>Name</label>
-                    <input type="text"/>
+            {% if flag == 'SIGNUP' %}
+                <div class="title chorizontal">
+                    <img src="{% static 'img/boox.png' %}" alt="Logo" />
+                    <span>Sign Up to Boox</span>
                 </div>
-                <div class="field">
-                    <label>Email</label>
-                    <input type="text" />
+                <form>
+                    <div class="field">
+                        <label>Name</label>
+                        <input type="text" />
+                    </div>
+                    <div class="field">
+                        <label>Email</label>
+                        <input type="text" />
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <input type="password" />
+                    </div>
+                    <div class="field">
+                        <label>Confirm Password</label>
+                        <input type="password" />
+                    </div>
+                    <p class="agree">
+                        By clicking Sign Up you are agree to our
+                        <a href="#">Terms and Conditions</a>.
+                    </p>
+                    <div class="chorizontal">
+                        <button type="button" class="button">Sign Up</button>
+                        <a href="/signin">Have an account?</a>
+                    </div>
+                </form>
+            {% else %}
+                <div class="title chorizontal">
+                    <img src="{% static 'img/boox.png' %}" alt="Logo" />
+                    <span>Welcome back!</span>
                 </div>
-                <div class="field">
-                    <label>Password</label>
-                    <input type="password" />
-                </div>
-                <div class="field">
-                    <label>Confirm Password</label>
-                    <input type="password" />
-                </div>
-                <p class="agree">
-                    By clicking Sign Up you are agree to our 
-                    <a href="#">Terms and Conditions</a>.
-                </p>
-                <div class="chorizontal">
-                    <button type="button" class="button">Sign Up</button>
-                    <a href="/signin">Have an account?</a>
-                </div>
-            </form>
+                <form>
+                    <div class="field">
+                        <label>Email</label>
+                        <input type="text" />
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <input type="password" />
+                    </div>
+                    <p class="agree">
+                        By clicking Sign In you are agree to our
+                        <a href="#">Terms and Conditions</a>.
+                    </p>
+                    <div class="chorizontal">
+                        <button type="button" class="button">Sign In</button>
+                        <a href="/forgot">Forgot password?</a>
+                    </div>
+                </form>
+            {% endif %}
         </div>
     </div>
 </body>
